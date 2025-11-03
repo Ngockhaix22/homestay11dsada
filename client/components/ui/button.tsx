@@ -5,18 +5,26 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative overflow-hidden",
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg hover:shadow-primary/50 active:scale-95",
+        default: `relative bg-gradient-to-r from-primary via-primary to-accent text-white
+          hover:shadow-xl hover:shadow-primary/40
+          active:scale-95
+          before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
+          before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700`,
         destructive:
           "bg-destructive text-destructive-foreground hover:shadow-lg hover:shadow-destructive/50 active:scale-95",
         outline:
-          "backdrop-blur-md bg-white/20 border border-white/30 text-foreground hover:bg-white/30 hover:border-white/50 hover:shadow-lg active:scale-95",
+          "-webkit-backdrop-filter: blur(16px) saturate(180%); backdrop-filter: blur(16px) saturate(180%); background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%); border: 1px solid rgba(255, 255, 255, 0.35); text-foreground hover:bg-white/40 hover:border-white/50 hover:shadow-lg active:scale-95",
         secondary:
           "bg-secondary text-secondary-foreground hover:shadow-lg hover:shadow-secondary/50 active:scale-95",
-        ghost: "backdrop-blur-sm bg-white/10 border border-white/20 hover:bg-white/20 hover:shadow-lg active:scale-95",
+        ghost: `-webkit-backdrop-filter: blur(12px) saturate(180%); backdrop-filter: blur(12px) saturate(180%);
+          background: rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          text-foreground
+          hover:bg-white/25 hover:border-white/35 hover:shadow-lg active:scale-95`,
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
