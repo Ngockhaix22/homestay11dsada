@@ -1,22 +1,21 @@
-import { defineConfig, Plugin } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { createServer } from "./server";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ command }) => ({
   server: {
-    host: true, // cho phép truy cập từ bên ngoài
+    host: "::",
     port: 8080,
-    allowedHosts: ["homestay11dsada.onrender.com"], // 👈 thêm dòng này
     fs: {
       allow: [".", "./client", "./shared"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
+    allowedHosts: ["homestay11dsada.onrender.com"], // ✅ chỉ cần dòng này nếu chạy dev ngoài localhost
   },
   build: {
     outDir: "dist/spa",
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [react()], // ❌ bỏ expressPlugin() ra, chỉ giữ React
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
@@ -24,13 +23,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-
-function expressPlugin(): Plugin {
-  return {
-    name: "express-plugin",
-    apply: "serve",
-    configureServer(server) {
-      const app = createServer();
-      server.middlewares.use(app);
-    },
-  };
