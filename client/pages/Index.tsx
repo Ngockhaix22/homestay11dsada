@@ -33,7 +33,7 @@ export default function Index() {
       id: 1,
       icon: Waves,
       title: "Hồ Bơi",
-      description: "Hồ bơi vô cực với tầm nhìn tuyệt đẹp",
+      description: "Hồ bơi vô cực với tầm nhìn tuy��t đẹp",
     },
     {
       id: 2,
@@ -120,18 +120,18 @@ export default function Index() {
               </div>
 
               {/* Quick Stats */}
-              <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-white/30">
-                <div className="glass-sm p-4">
-                  <p className="text-2xl font-bold text-primary">5</p>
-                  <p className="text-sm text-foreground/60">Phòng Ngủ</p>
+              <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
+                <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5</p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">Phòng Ngủ</p>
                 </div>
-                <div className="glass-sm p-4">
-                  <p className="text-2xl font-bold text-primary">1</p>
-                  <p className="text-sm text-foreground/60">Hồ Bơi</p>
+                <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">1</p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">Hồ Bơi</p>
                 </div>
-                <div className="glass-sm p-4">
-                  <p className="text-2xl font-bold text-primary">4.9★</p>
-                  <p className="text-sm text-foreground/60">Đánh Giá Khách</p>
+                <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.9★</p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">Đánh Giá Khách</p>
                 </div>
               </div>
             </div>
