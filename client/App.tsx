@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Rooms from "./pages/Rooms";
 import Booking from "./pages/Booking";
+import Payment from "./pages/Payment";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
