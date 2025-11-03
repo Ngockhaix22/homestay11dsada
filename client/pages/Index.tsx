@@ -165,7 +165,7 @@ export default function Index() {
               Chọn Kỳ Nghỉ Hoàn Hảo
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân sách của bạn
+              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân s��ch của bạn
             </p>
           </div>
 
@@ -214,18 +214,24 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {amenities.map((amenity) => {
+            {amenities.map((amenity, index) => {
               const Icon = amenity.icon;
               return (
                 <div
                   key={amenity.id}
-                  className="glass-card text-center group"
+                  className="glass-card text-center group relative overflow-hidden"
+                  style={{
+                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                  }}
                 >
-                  <div className="mb-6 inline-flex p-4 glass-sm rounded-full">
-                    <Icon size={32} className="text-primary" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10">
+                    <div className="mb-6 inline-flex p-4 glass-sm rounded-full group-hover:scale-125 transition-transform duration-300">
+                      <Icon size={32} className="text-primary" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground mb-3">{amenity.title}</h3>
+                    <p className="text-foreground/70 leading-relaxed">{amenity.description}</p>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">{amenity.title}</h3>
-                  <p className="text-foreground/60">{amenity.description}</p>
                 </div>
               );
             })}
