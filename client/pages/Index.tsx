@@ -1,14 +1,25 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import { Wifi, ChefHat, Waves, Home, MapPin, Clock, Users, Star, ArrowRight } from "lucide-react";
+import {
+  Wifi,
+  ChefHat,
+  Waves,
+  Home,
+  MapPin,
+  Clock,
+  Users,
+  Star,
+  ArrowRight,
+} from "lucide-react";
 
 export default function Index() {
   const bookingOptions = [
     {
       id: 1,
       title: "Đặt Theo Ngày",
-      description: "Hoàn hảo cho những chuyến du lịch cuối tuần và lưu trú ngắn hạn",
+      description:
+        "Hoàn hảo cho những chuyến du lịch cuối tuần và lưu trú ngắn hạn",
       price: "Từ 299.000₫/đêm",
       icon: Clock,
     },
@@ -85,8 +96,14 @@ export default function Index() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-blue-300/20 to-blue-400/10 rounded-full -mr-48 blur-3xl animate-pulse-glow"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-orange-300/20 to-orange-400/10 rounded-full -ml-48 blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-gradient-to-br from-purple-300/15 to-pink-300/10 rounded-full blur-3xl animate-float" style={{animationDelay: '0.5s'}}></div>
+          <div
+            className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-orange-300/20 to-orange-400/10 rounded-full -ml-48 blur-3xl animate-pulse-glow"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute top-1/2 left-1/3 w-72 h-72 bg-gradient-to-br from-purple-300/15 to-pink-300/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
         </div>
 
         <div className="relative container mx-auto px-4 py-20 md:py-32 z-10">
@@ -102,7 +119,9 @@ export default function Index() {
                 Biệt Thự Mơ Ước Của Bạn
               </h1>
               <p className="text-lg text-foreground/70 mb-8 leading-relaxed max-w-lg">
-                Trải nghiệm accommodation hạng sang với 5 phòng ngủ, hồ bơi riêng, và bếp BBQ đẳng cấp thế giới. Hoàn hảo cho gia đình, nhóm, và các buổi lễ kỷ niệm.
+                Trải nghiệm accommodation hạng sang với 5 phòng ngủ, hồ bơi
+                riêng, và bếp BBQ đẳng cấp thế giới. Hoàn hảo cho gia đình,
+                nhóm, và các buổi lễ kỷ niệm.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -113,7 +132,11 @@ export default function Index() {
                   </Button>
                 </Link>
                 <Link to="/rooms">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="w-full sm:w-auto"
+                  >
                     Xem Phòng
                   </Button>
                 </Link>
@@ -122,16 +145,28 @@ export default function Index() {
               {/* Quick Stats */}
               <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-white/20">
                 <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5</p>
-                  <p className="text-sm text-foreground/70 mt-2 font-medium">Phòng Ngủ</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    5
+                  </p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">
+                    Phòng Ngủ
+                  </p>
                 </div>
                 <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">1</p>
-                  <p className="text-sm text-foreground/70 mt-2 font-medium">Hồ Bơi</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    1
+                  </p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">
+                    Hồ Bơi
+                  </p>
                 </div>
                 <div className="glass-sm p-6 text-center group hover:scale-105 transition-transform duration-300">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.9★</p>
-                  <p className="text-sm text-foreground/70 mt-2 font-medium">Đánh Giá Khách</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    4.9★
+                  </p>
+                  <p className="text-sm text-foreground/70 mt-2 font-medium">
+                    Đánh Giá Khách
+                  </p>
                 </div>
               </div>
             </div>
@@ -165,7 +200,8 @@ export default function Index() {
               Chọn Kỳ Nghỉ Hoàn Hảo
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân sách của bạn
+              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân sách
+              của bạn
             </p>
           </div>
 
@@ -177,7 +213,7 @@ export default function Index() {
                   key={option.id}
                   className="glass-card group relative overflow-hidden"
                   style={{
-                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -185,11 +221,20 @@ export default function Index() {
                     <div className="mb-6 inline-block p-4 glass-sm group-hover:scale-110 transition-transform duration-300">
                       <Icon size={32} className="text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">{option.title}</h3>
-                    <p className="text-foreground/70 mb-6 leading-relaxed">{option.description}</p>
-                    <p className="text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">{option.price}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-3">
+                      {option.title}
+                    </h3>
+                    <p className="text-foreground/70 mb-6 leading-relaxed">
+                      {option.description}
+                    </p>
+                    <p className="text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+                      {option.price}
+                    </p>
                     <Link to="/booking">
-                      <Button variant="outline" className="w-full font-semibold">
+                      <Button
+                        variant="outline"
+                        className="w-full font-semibold"
+                      >
                         Tìm Hiểu Thêm
                       </Button>
                     </Link>
@@ -221,7 +266,7 @@ export default function Index() {
                   key={amenity.id}
                   className="glass-card text-center group relative overflow-hidden"
                   style={{
-                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -229,8 +274,12 @@ export default function Index() {
                     <div className="mb-6 inline-flex p-4 glass-sm rounded-full group-hover:scale-125 transition-transform duration-300">
                       <Icon size={32} className="text-primary" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground mb-3">{amenity.title}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{amenity.description}</p>
+                    <h3 className="text-lg font-bold text-foreground mb-3">
+                      {amenity.title}
+                    </h3>
+                    <p className="text-foreground/70 leading-relaxed">
+                      {amenity.description}
+                    </p>
                   </div>
                 </div>
               );
@@ -257,20 +306,30 @@ export default function Index() {
                 key={testimonial.id}
                 className="glass-card group relative overflow-hidden"
                 style={{
-                  animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                  animation: `glassFade 0.8s ease-out ${index * 0.1}s both`,
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} size={18} className="text-accent fill-accent" />
+                      <Star
+                        key={i}
+                        size={18}
+                        className="text-accent fill-accent"
+                      />
                     ))}
                   </div>
-                  <p className="text-foreground/80 mb-6 italic leading-relaxed">{testimonial.text}</p>
+                  <p className="text-foreground/80 mb-6 italic leading-relaxed">
+                    {testimonial.text}
+                  </p>
                   <div className="pt-4 border-t border-white/20">
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-foreground/60">{testimonial.role}</p>
+                    <p className="font-semibold text-foreground">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-foreground/60">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -283,7 +342,10 @@ export default function Index() {
       <section className="py-20 px-4 md:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-blue-300/10 rounded-full -mr-48 -mt-48 blur-3xl animate-pulse-glow"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-orange-400/20 to-orange-300/10 rounded-full -ml-48 -mb-48 blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+          <div
+            className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-orange-400/20 to-orange-300/10 rounded-full -ml-48 -mb-48 blur-3xl animate-pulse-glow"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
         <div className="relative z-10 glass rounded-3xl overflow-hidden">
           <div className="container mx-auto px-8 py-20 md:py-24 text-center relative">
@@ -295,7 +357,8 @@ export default function Index() {
                 Sẵn Sàng Đặt Kỳ Nghỉ Mơ Ước?
               </h2>
               <p className="text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Đặt ngày của bạn ngay bây giờ và trải nghiệm sự sang trọng như chưa từng có
+                Đặt ngày của bạn ngay bây giờ và trải nghiệm sự sang trọng như
+                chưa từng có
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/booking">
@@ -304,7 +367,11 @@ export default function Index() {
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="px-10 font-semibold text-base">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="px-10 font-semibold text-base"
+                  >
                     Liên Hệ Chúng Tôi
                   </Button>
                 </Link>
