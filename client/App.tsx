@@ -33,15 +33,36 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           {/* Placeholder routes for other pages - can be implemented later */}
           <Route path="/blog" element={<PlaceholderPage title="Blog" />} />
-          <Route path="/careers" element={<PlaceholderPage title="Careers" />} />
+          <Route
+            path="/careers"
+            element={<PlaceholderPage title="Careers" />}
+          />
           <Route path="/press" element={<PlaceholderPage title="Press" />} />
           <Route path="/faq" element={<PlaceholderPage title="FAQ" />} />
-          <Route path="/support" element={<PlaceholderPage title="Support" />} />
-          <Route path="/guide" element={<PlaceholderPage title="Booking Guide" />} />
-          <Route path="/privacy" element={<PlaceholderPage title="Privacy Policy" />} />
-          <Route path="/terms" element={<PlaceholderPage title="Terms of Service" />} />
-          <Route path="/cancellation" element={<PlaceholderPage title="Cancellation Policy" />} />
-          <Route path="/cookies" element={<PlaceholderPage title="Cookie Policy" />} />
+          <Route
+            path="/support"
+            element={<PlaceholderPage title="Support" />}
+          />
+          <Route
+            path="/guide"
+            element={<PlaceholderPage title="Booking Guide" />}
+          />
+          <Route
+            path="/privacy"
+            element={<PlaceholderPage title="Privacy Policy" />}
+          />
+          <Route
+            path="/terms"
+            element={<PlaceholderPage title="Terms of Service" />}
+          />
+          <Route
+            path="/cancellation"
+            element={<PlaceholderPage title="Cancellation Policy" />}
+          />
+          <Route
+            path="/cookies"
+            element={<PlaceholderPage title="Cookie Policy" />}
+          />
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  MapPin,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -43,11 +50,14 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-2xl block">VillaStay</span>
-                <span className="text-xs text-primary/70">Premium Villa Rentals</span>
+                <span className="text-xs text-primary/70">
+                  Premium Villa Rentals
+                </span>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Cho thuê biệt thự hạng sang với view tuyệt đẹp, 5 phòng ngủ, hồ bơi riêng và bếp nướng BBQ.
+              Cho thuê biệt thự hạng sang với view tuyệt đẹp, 5 phòng ngủ, hồ
+              bơi riêng và bếp nướng BBQ.
             </p>
             <div className="flex gap-3">
               <a
@@ -127,7 +137,10 @@ export default function Footer() {
             <h4 className="font-semibold mb-6 text-white text-base">Liên Hệ</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
-                <MapPin size={18} className="flex-shrink-0 mt-0.5 text-primary/70" />
+                <MapPin
+                  size={18}
+                  className="flex-shrink-0 mt-0.5 text-primary/70"
+                />
                 <span>123 Đường Villa, Thành Phố Thiên Đường, VN 12345</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
@@ -147,10 +160,16 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-sm text-white/50">
             <p>&copy; {currentYear} VillaStay. Tất cả quyền được bảo vệ.</p>
             <div className="flex gap-6">
-              <Link to="/privacy" className="hover:text-primary transition-colors">
+              <Link
+                to="/privacy"
+                className="hover:text-primary transition-colors"
+              >
                 Chính Sách Bảo Mật
               </Link>
-              <Link to="/terms" className="hover:text-primary transition-colors">
+              <Link
+                to="/terms"
+                className="hover:text-primary transition-colors"
+              >
                 Điều Khoản Dịch Vụ
               </Link>
             </div>

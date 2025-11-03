@@ -1,7 +1,16 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { CreditCard, Wallet, Home, Users, Calendar, Shield, Check, Lock } from "lucide-react";
+import {
+  CreditCard,
+  Wallet,
+  Home,
+  Users,
+  Calendar,
+  Shield,
+  Check,
+  Lock,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Payment() {
@@ -52,9 +61,12 @@ export default function Payment() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent"></div>
         <div className="absolute -top-40 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
         <div className="relative container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Hoàn Tất Thanh Toán</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Hoàn Tất Thanh Toán
+          </h1>
           <p className="text-lg text-foreground/60 max-w-2xl">
-            Chọn phương thức thanh toán của bạn và hoàn tất đặt phòng của bạn một cách an toàn
+            Chọn phương thức thanh toán của bạn và hoàn tất đặt phòng của bạn
+            một cách an toàn
           </p>
         </div>
       </section>
@@ -67,7 +79,9 @@ export default function Payment() {
             <div className="lg:col-span-2">
               {/* Booking Summary */}
               <div className="glass-card rounded-2xl p-8 border border-primary/10 mb-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">Chi Tiết Đặt Phòng</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-6">
+                  Chi Tiết Đặt Phòng
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
@@ -75,7 +89,9 @@ export default function Payment() {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/60">Nhận Phòng</p>
-                      <p className="font-semibold text-foreground">{bookingData.checkIn}</p>
+                      <p className="font-semibold text-foreground">
+                        {bookingData.checkIn}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -84,7 +100,9 @@ export default function Payment() {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/60">Trả Phòng</p>
-                      <p className="font-semibold text-foreground">{bookingData.checkOut}</p>
+                      <p className="font-semibold text-foreground">
+                        {bookingData.checkOut}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -93,7 +111,9 @@ export default function Payment() {
                     </div>
                     <div>
                       <p className="text-sm text-foreground/60">Số Khách</p>
-                      <p className="font-semibold text-foreground">{bookingData.guests} Người</p>
+                      <p className="font-semibold text-foreground">
+                        {bookingData.guests} Người
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -103,9 +123,15 @@ export default function Payment() {
                       <Home size={32} className="text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-foreground/60">Biệt Thự 5 Phòng Ngủ</p>
-                      <p className="font-semibold text-foreground text-lg">VillaStay Premium</p>
-                      <p className="text-sm text-primary mt-1">Hồ bơi, BBQ, View tuyệt đẹp</p>
+                      <p className="text-sm text-foreground/60">
+                        Biệt Thự 5 Phòng Ngủ
+                      </p>
+                      <p className="font-semibold text-foreground text-lg">
+                        VillaStay Premium
+                      </p>
+                      <p className="text-sm text-primary mt-1">
+                        Hồ bơi, BBQ, View tuyệt đẹp
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -113,7 +139,9 @@ export default function Payment() {
 
               {/* Payment Methods Selection */}
               <div className="mb-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">Chọn Phương Thức Thanh Toán</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-6">
+                  Chọn Phương Thức Thanh Toán
+                </h2>
                 <div className="grid grid-cols-1 gap-4">
                   {paymentMethods.map((method) => {
                     const Icon = method.icon;
@@ -129,16 +157,22 @@ export default function Payment() {
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-4">
-                            <div className={`w-14 h-14 rounded-lg flex items-center justify-center transition-all ${
-                              selectedPayment === method.id
-                                ? "bg-primary/30 text-primary"
-                                : "bg-white/10 text-foreground/60 group-hover:text-primary"
-                            }`}>
+                            <div
+                              className={`w-14 h-14 rounded-lg flex items-center justify-center transition-all ${
+                                selectedPayment === method.id
+                                  ? "bg-primary/30 text-primary"
+                                  : "bg-white/10 text-foreground/60 group-hover:text-primary"
+                              }`}
+                            >
                               <Icon size={28} />
                             </div>
                             <div className="text-left">
-                              <p className="font-semibold text-foreground">{method.label}</p>
-                              <p className="text-sm text-foreground/60">{method.description}</p>
+                              <p className="font-semibold text-foreground">
+                                {method.label}
+                              </p>
+                              <p className="text-sm text-foreground/60">
+                                {method.description}
+                              </p>
                             </div>
                           </div>
                           {selectedPayment === method.id && (
@@ -154,8 +188,13 @@ export default function Payment() {
               </div>
 
               {/* Payment Form */}
-              <form onSubmit={handlePayment} className="glass-card rounded-2xl p-8 border border-primary/10">
-                <h2 className="text-2xl font-bold text-foreground mb-6">Thông Tin Thanh Toán</h2>
+              <form
+                onSubmit={handlePayment}
+                className="glass-card rounded-2xl p-8 border border-primary/10"
+              >
+                <h2 className="text-2xl font-bold text-foreground mb-6">
+                  Thông Tin Thanh Toán
+                </h2>
 
                 {selectedPayment === "card" && (
                   <div className="space-y-6">
@@ -212,10 +251,17 @@ export default function Payment() {
                   <div className="space-y-6">
                     <div className="p-6 bg-primary/10 rounded-xl border border-primary/20">
                       <p className="text-foreground/70 mb-4">
-                        Bạn sẽ được chuyển hướng đến <span className="font-semibold text-primary">Momo</span> hoặc <span className="font-semibold text-primary">Zalopay</span> để hoàn thành thanh toán.
+                        Bạn sẽ được chuyển hướng đến{" "}
+                        <span className="font-semibold text-primary">Momo</span>{" "}
+                        hoặc{" "}
+                        <span className="font-semibold text-primary">
+                          Zalopay
+                        </span>{" "}
+                        để hoàn thành thanh toán.
                       </p>
                       <p className="text-sm text-foreground/60">
-                        Thanh toán sẽ được xử lý một cách an toàn thông qua nền tảng của họ.
+                        Thanh toán sẽ được xử lý một cách an toàn thông qua nền
+                        tảng của họ.
                       </p>
                     </div>
                     <div>
@@ -236,10 +282,12 @@ export default function Payment() {
                   <div className="space-y-6">
                     <div className="p-6 bg-primary/10 rounded-xl border border-primary/20">
                       <p className="text-foreground/70 mb-4">
-                        Chúng tôi sẽ cung cấp chi tiết tài khoản ngân hàng cho thanh toán.
+                        Chúng tôi sẽ cung cấp chi tiết tài khoản ngân hàng cho
+                        thanh toán.
                       </p>
                       <p className="text-sm text-foreground/60">
-                        Vui lòng đảm bảo chuyển đúng số tiền và kèm theo mã tham chiếu để xác nhận thanh toán.
+                        Vui lòng đảm bảo chuyển đúng số tiền và kèm theo mã tham
+                        chiếu để xác nhận thanh toán.
                       </p>
                     </div>
                     <div>
@@ -258,11 +306,17 @@ export default function Payment() {
 
                 {/* Security Info */}
                 <div className="mt-8 p-4 bg-green-500/10 rounded-xl border border-green-500/20 flex items-start gap-3">
-                  <Shield size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Shield
+                    size={20}
+                    className="text-green-500 flex-shrink-0 mt-0.5"
+                  />
                   <div>
-                    <p className="font-semibold text-green-600 mb-1">Thanh Toán An Toàn</p>
+                    <p className="font-semibold text-green-600 mb-1">
+                      Thanh Toán An Toàn
+                    </p>
                     <p className="text-sm text-green-600/80">
-                      Tất cả giao dịch được mã hóa bằng SSL. Thông tin của b��n được bảo vệ hoàn toàn.
+                      Tất cả giao dịch được mã hóa bằng SSL. Thông tin của b��n
+                      được bảo vệ hoàn toàn.
                     </p>
                   </div>
                 </div>
@@ -275,12 +329,29 @@ export default function Payment() {
                     className="mt-1 cursor-pointer"
                     required
                   />
-                  <label htmlFor="terms" className="text-sm text-foreground/70 cursor-pointer">
-                    Tôi đồng ý với <Link to="/terms" className="text-primary hover:underline">Điều Khoản Dịch Vụ</Link> và <Link to="/privacy" className="text-primary hover:underline">Chính Sách Bảo Mật</Link>
+                  <label
+                    htmlFor="terms"
+                    className="text-sm text-foreground/70 cursor-pointer"
+                  >
+                    Tôi đồng ý với{" "}
+                    <Link to="/terms" className="text-primary hover:underline">
+                      Điều Khoản Dịch Vụ
+                    </Link>{" "}
+                    và{" "}
+                    <Link
+                      to="/privacy"
+                      className="text-primary hover:underline"
+                    >
+                      Chính Sách Bảo Mật
+                    </Link>
                   </label>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full mt-8 bg-gradient-to-r from-primary to-accent text-white">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full mt-8 bg-gradient-to-r from-primary to-accent text-white"
+                >
                   <Lock size={20} className="mr-2" />
                   Xác Nhận Thanh Toán ({finalTotal.toLocaleString()} VND)
                 </Button>
@@ -290,12 +361,15 @@ export default function Payment() {
             {/* Right Column - Price Summary */}
             <div>
               <div className="glass-card rounded-2xl p-8 border border-primary/10 sticky top-24">
-                <h2 className="text-2xl font-bold text-foreground mb-8">Tóm Tắt Giá</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-8">
+                  Tóm Tắt Giá
+                </h2>
 
                 <div className="space-y-4 mb-6 pb-6 border-b border-white/10">
                   <div className="flex justify-between items-center">
                     <span className="text-foreground/70">
-                      {bookingData.nights} Đêm x {bookingData.pricePerNight.toLocaleString()} VND
+                      {bookingData.nights} Đêm x{" "}
+                      {bookingData.pricePerNight.toLocaleString()} VND
                     </span>
                     <span className="font-semibold text-foreground">
                       {totalPrice.toLocaleString()} VND
@@ -316,7 +390,9 @@ export default function Payment() {
                 </div>
 
                 <div className="flex justify-between items-center mb-8 bg-primary/10 p-4 rounded-xl">
-                  <span className="font-semibold text-foreground">Tổng Cộng</span>
+                  <span className="font-semibold text-foreground">
+                    Tổng Cộng
+                  </span>
                   <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     {finalTotal.toLocaleString()} VND
                   </span>
@@ -324,7 +400,9 @@ export default function Payment() {
 
                 {/* Inclusions */}
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-foreground mb-4">Bao Gồm</h3>
+                  <h3 className="font-semibold text-foreground mb-4">
+                    Bao Gồm
+                  </h3>
                   {[
                     "Phòng Ngủ 5 Phòng",
                     "Hồ Bơi Riêng",
@@ -342,7 +420,9 @@ export default function Payment() {
 
                 {/* Cancellation Policy */}
                 <div className="mt-8 p-4 bg-blue-500/10 rounded-xl border border-blue-500/20">
-                  <p className="text-xs font-semibold text-blue-600 mb-2">HỦY MIỄN PHÍ</p>
+                  <p className="text-xs font-semibold text-blue-600 mb-2">
+                    HỦY MIỄN PHÍ
+                  </p>
                   <p className="text-xs text-blue-600/80">
                     Hủy miễn phí tới 7 ngày trước khi nhận phòng
                   </p>
@@ -356,7 +436,9 @@ export default function Payment() {
       {/* Additional Info */}
       <section className="py-16 bg-gradient-to-b from-primary/5 to-transparent rounded-3xl mx-4 md:mx-8 lg:mx-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Các Câu Hỏi Thường Gặp</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+            Các Câu Hỏi Thường Gặp
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -376,8 +458,13 @@ export default function Payment() {
                 a: "Bạn cần thanh toán 50% để xác nhận đặt phòng. Phần còn lại có thể thanh toán 7 ngày trước nhận phòng.",
               },
             ].map((faq, idx) => (
-              <div key={idx} className="glass-card rounded-2xl p-8 border border-primary/10">
-                <h3 className="font-semibold text-foreground mb-3 text-lg">{faq.q}</h3>
+              <div
+                key={idx}
+                className="glass-card rounded-2xl p-8 border border-primary/10"
+              >
+                <h3 className="font-semibold text-foreground mb-3 text-lg">
+                  {faq.q}
+                </h3>
                 <p className="text-foreground/70 leading-relaxed">{faq.a}</p>
               </div>
             ))}
