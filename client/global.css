@@ -118,9 +118,28 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-background via-primary/5 to-accent/5 text-foreground;
+    @apply text-foreground;
     font-feature-settings: "rounding" 1;
     min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 25%, #fff5f0 50%, #f0f7ff 75%, #ffffff 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(199, 210, 254, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(254, 215, 170, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(191, 219, 254, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
