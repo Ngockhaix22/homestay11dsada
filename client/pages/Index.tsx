@@ -82,13 +82,14 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/15 rounded-full -mr-48 -mt-48 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/15 rounded-full -ml-48 -mb-48 blur-3xl"></div>
+          <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-blue-300/20 to-blue-400/10 rounded-full -mr-48 blur-3xl animate-pulse-glow"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-orange-300/20 to-orange-400/10 rounded-full -ml-48 blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-gradient-to-br from-purple-300/15 to-pink-300/10 rounded-full blur-3xl animate-float" style={{animationDelay: '0.5s'}}></div>
         </div>
 
-        <div className="relative container mx-auto px-4 py-20 md:py-32">
+        <div className="relative container mx-auto px-4 py-20 md:py-32 z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div className="animate-glass-in">
@@ -225,7 +226,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-glass-fade">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Yêu Thích Của Khách Hàng
+              Yêu Thích C���a Khách Hàng
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
               Những trải nghiệm thực tế từ những du khách hài lòng
