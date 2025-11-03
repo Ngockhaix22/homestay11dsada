@@ -137,14 +137,20 @@ export default function Index() {
             </div>
 
             {/* Hero Image Placeholder */}
-            <div className="animate-glass-fade">
-              <div className="relative h-96 md:h-full min-h-96 glass overflow-hidden shadow-2xl">
+            <div className="animate-glass-fade relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/20 rounded-3xl blur-2xl opacity-60"></div>
+              <div className="relative h-96 md:h-full min-h-96 overflow-hidden rounded-3xl border-2 border-white/40 shadow-2xl group">
                 <img
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop"
                   alt="Biệt thự hạng sang"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 glass opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Button size="lg" className="relative z-20">
+                    Xem Tất Cả Ảnh
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -226,7 +232,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-glass-fade">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Yêu Thích C���a Khách Hàng
+              Yêu Thích Của Khách Hàng
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
               Những trải nghiệm thực tế từ những du khách hài lòng
