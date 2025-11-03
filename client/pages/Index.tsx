@@ -280,29 +280,35 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 glass m-8 md:m-20 rounded-3xl overflow-hidden">
-        <div className="relative container mx-auto px-4 text-center">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
-          </div>
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Sẵn Sàng Đặt Kỳ Nghỉ Mơ Ước?
-            </h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-8">
-              Đặt ngày của bạn ngay bây giờ và trải nghiệm sự sang trọng như chưa từng có
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/booking">
-                <Button size="lg" className="px-8">
-                  Đặt Ngay
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="px-8">
-                  Liên Hệ Chúng Tôi
-                </Button>
-              </Link>
+      <section className="py-20 px-4 md:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-blue-300/10 rounded-full -mr-48 -mt-48 blur-3xl animate-pulse-glow"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-orange-400/20 to-orange-300/10 rounded-full -ml-48 -mb-48 blur-3xl animate-pulse-glow" style={{animationDelay: '1s'}}></div>
+        </div>
+        <div className="relative z-10 glass rounded-3xl overflow-hidden">
+          <div className="container mx-auto px-8 py-20 md:py-24 text-center relative">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
+            </div>
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent mb-6 leading-tight">
+                Sẵn Sàng Đặt Kỳ Nghỉ Mơ Ước?
+              </h2>
+              <p className="text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Đặt ngày của bạn ngay bây giờ và trải nghiệm sự sang trọng như chưa từng có
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/booking">
+                  <Button size="lg" className="px-10 font-semibold text-base">
+                    Đặt Ngay
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="px-10 font-semibold text-base">
+                    Liên Hệ Chúng Tôi
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
