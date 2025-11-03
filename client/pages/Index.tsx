@@ -165,7 +165,7 @@ export default function Index() {
               Chọn Kỳ Nghỉ Hoàn Hảo
             </h2>
             <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân s��ch của bạn
+              Các tùy chọn đặt phòng linh hoạt để phù hợp nhu cầu và ngân sách của bạn
             </p>
           </div>
 
@@ -252,20 +252,26 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="glass-card"
+                className="glass-card group relative overflow-hidden"
+                style={{
+                  animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                }}
               >
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} size={18} className="text-accent fill-accent" />
-                  ))}
-                </div>
-                <p className="text-foreground/80 mb-6 italic">{testimonial.text}</p>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-foreground/60">{testimonial.role}</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} size={18} className="text-accent fill-accent" />
+                    ))}
+                  </div>
+                  <p className="text-foreground/80 mb-6 italic leading-relaxed">{testimonial.text}</p>
+                  <div className="pt-4 border-t border-white/20">
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                    <p className="text-sm text-foreground/60">{testimonial.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
