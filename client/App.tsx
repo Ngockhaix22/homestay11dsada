@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Rooms from "./pages/Rooms";
 import Booking from "./pages/Booking";
+import Payment from "./pages/Payment";
 import Login from "./pages/Login";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -26,20 +27,42 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/payment" element={<Payment />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* Placeholder routes for other pages - can be implemented later */}
           <Route path="/blog" element={<PlaceholderPage title="Blog" />} />
-          <Route path="/careers" element={<PlaceholderPage title="Careers" />} />
+          <Route
+            path="/careers"
+            element={<PlaceholderPage title="Careers" />}
+          />
           <Route path="/press" element={<PlaceholderPage title="Press" />} />
           <Route path="/faq" element={<PlaceholderPage title="FAQ" />} />
-          <Route path="/support" element={<PlaceholderPage title="Support" />} />
-          <Route path="/guide" element={<PlaceholderPage title="Booking Guide" />} />
-          <Route path="/privacy" element={<PlaceholderPage title="Privacy Policy" />} />
-          <Route path="/terms" element={<PlaceholderPage title="Terms of Service" />} />
-          <Route path="/cancellation" element={<PlaceholderPage title="Cancellation Policy" />} />
-          <Route path="/cookies" element={<PlaceholderPage title="Cookie Policy" />} />
+          <Route
+            path="/support"
+            element={<PlaceholderPage title="Support" />}
+          />
+          <Route
+            path="/guide"
+            element={<PlaceholderPage title="Booking Guide" />}
+          />
+          <Route
+            path="/privacy"
+            element={<PlaceholderPage title="Privacy Policy" />}
+          />
+          <Route
+            path="/terms"
+            element={<PlaceholderPage title="Terms of Service" />}
+          />
+          <Route
+            path="/cancellation"
+            element={<PlaceholderPage title="Cancellation Policy" />}
+          />
+          <Route
+            path="/cookies"
+            element={<PlaceholderPage title="Cookie Policy" />}
+          />
           {/* CATCH-ALL ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
