@@ -33,7 +33,7 @@ export default function Index() {
       id: 1,
       icon: Waves,
       title: "Hồ Bơi",
-      description: "Hồ bơi vô cực với tầm nhìn tuy��t đẹp",
+      description: "Hồ bơi vô cực với tầm nhìn tuyệt đẹp",
     },
     {
       id: 2,
@@ -170,24 +170,30 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {bookingOptions.map((option) => {
+            {bookingOptions.map((option, index) => {
               const Icon = option.icon;
               return (
                 <div
                   key={option.id}
-                  className="glass-card group"
+                  className="glass-card group relative overflow-hidden"
+                  style={{
+                    animation: `glassFade 0.8s ease-out ${index * 0.1}s both`
+                  }}
                 >
-                  <div className="mb-6 inline-block p-3 glass-sm">
-                    <Icon size={32} className="text-primary" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative z-10">
+                    <div className="mb-6 inline-block p-4 glass-sm group-hover:scale-110 transition-transform duration-300">
+                      <Icon size={32} className="text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{option.title}</h3>
+                    <p className="text-foreground/70 mb-6 leading-relaxed">{option.description}</p>
+                    <p className="text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">{option.price}</p>
+                    <Link to="/booking">
+                      <Button variant="outline" className="w-full font-semibold">
+                        Tìm Hiểu Thêm
+                      </Button>
+                    </Link>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{option.title}</h3>
-                  <p className="text-foreground/60 mb-6">{option.description}</p>
-                  <p className="text-lg font-semibold text-primary mb-6">{option.price}</p>
-                  <Link to="/booking">
-                    <Button variant="outline" className="w-full">
-                      Tìm Hiểu Thêm
-                    </Button>
-                  </Link>
                 </div>
               );
             })}
