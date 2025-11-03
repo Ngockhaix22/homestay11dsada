@@ -26,37 +26,45 @@ export default function Footer() {
   };
 
   return (
-    <footer className="glass-dark text-white mt-20 border-t border-white/10">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white mt-20 border-t border-primary/20">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-lg">V</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl">V</span>
               </div>
-              <span className="font-bold text-xl">VillaStay</span>
+              <div>
+                <span className="font-bold text-2xl block">VillaStay</span>
+                <span className="text-xs text-primary/70">Premium Villa Rentals</span>
+              </div>
             </div>
-            <p className="text-white/70 text-sm">
+            <p className="text-white/60 text-sm leading-relaxed mb-6">
               Cho thuê biệt thự hạng sang với view tuyệt đẹp, 5 phòng ngủ, hồ bơi riêng và bếp nướng BBQ.
             </p>
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-3">
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary hover:to-accent transition-all duration-300 flex items-center justify-center text-white/70 hover:text-white shadow-lg hover:shadow-primary/30"
               >
                 <Facebook size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary hover:to-accent transition-all duration-300 flex items-center justify-center text-white/70 hover:text-white shadow-lg hover:shadow-primary/30"
               >
                 <Instagram size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 hover:from-primary hover:to-accent transition-all duration-300 flex items-center justify-center text-white/70 hover:text-white shadow-lg hover:shadow-primary/30"
               >
                 <Twitter size={20} />
               </a>
@@ -65,13 +73,13 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold mb-4">Công Ty</h4>
+            <h4 className="font-semibold mb-6 text-white text-base">Công Ty</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm"
+                    className="text-white/60 hover:text-primary transition-colors text-sm font-medium"
                   >
                     {link.label}
                   </Link>
@@ -82,13 +90,13 @@ export default function Footer() {
 
           {/* Support Links */}
           <div>
-            <h4 className="font-semibold mb-4">Hỗ Trợ</h4>
+            <h4 className="font-semibold mb-6 text-white text-base">Hỗ Trợ</h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm"
+                    className="text-white/60 hover:text-primary transition-colors text-sm font-medium"
                   >
                     {link.label}
                   </Link>
@@ -99,13 +107,13 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h4 className="font-semibold mb-4">Pháp Lý</h4>
+            <h4 className="font-semibold mb-6 text-white text-base">Pháp Lý</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-white/70 hover:text-white transition-colors text-sm"
+                    className="text-white/60 hover:text-primary transition-colors text-sm font-medium"
                   >
                     {link.label}
                   </Link>
@@ -116,18 +124,18 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Liên Hệ</h4>
+            <h4 className="font-semibold mb-6 text-white text-base">Liên Hệ</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-sm text-white/70">
-                <MapPin size={18} className="flex-shrink-0 mt-0.5" />
+              <li className="flex items-start gap-3 text-sm text-white/60">
+                <MapPin size={18} className="flex-shrink-0 mt-0.5 text-primary/70" />
                 <span>123 Đường Villa, Thành Phố Thiên Đường, VN 12345</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/70">
-                <Phone size={18} />
+              <li className="flex items-center gap-3 text-sm text-white/60">
+                <Phone size={18} className="text-primary/70" />
                 <span>+84 123 456 7890</span>
               </li>
-              <li className="flex items-center gap-3 text-sm text-white/70">
-                <Mail size={18} />
+              <li className="flex items-center gap-3 text-sm text-white/60">
+                <Mail size={18} className="text-primary/70" />
                 <span>info@villastay.com</span>
               </li>
             </ul>
@@ -136,13 +144,13 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/10 py-8">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-sm text-white/70">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 text-sm text-white/50">
             <p>&copy; {currentYear} VillaStay. Tất cả quyền được bảo vệ.</p>
             <div className="flex gap-6">
-              <Link to="/privacy" className="hover:text-white transition-colors">
+              <Link to="/privacy" className="hover:text-primary transition-colors">
                 Chính Sách Bảo Mật
               </Link>
-              <Link to="/terms" className="hover:text-white transition-colors">
+              <Link to="/terms" className="hover:text-primary transition-colors">
                 Điều Khoản Dịch Vụ
               </Link>
             </div>
